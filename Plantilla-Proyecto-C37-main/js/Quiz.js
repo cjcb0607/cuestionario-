@@ -44,17 +44,18 @@ class Quiz {
     if(allContestants!==undefined){
      var dispos = 300 
      textSize(20);
-     text("si el jugador respondio correctamente su nombre sera verde",130,230); 
-     dispos= dispos+20 
+     text("si el jugador respondio correctamente su nombre sera verde",130,230);
      var answerC = "3"
      for(var plr in allContestants){
+      dispos= dispos+20 
        if(answerC===allContestants[plr].answer){
           fill("green")
         } else{
         fill("red")
           }
+          text(allContestants[plr].name+allContestants[plr].answer, 425, dispos)
     }
-     text(allContestants[plr].name, 425, dispos)
+     
     }
 
     //escribe el código para resaltar al concursante que respondió correctamente
